@@ -1,0 +1,638 @@
+// My Variables
+$primary: #C8B1A0;
+$secondary: #BEA18D;
+$BR-bg: #F1F0EF;
+$BR-white: #f8f6f4;
+$BR-gray-ed: #484848;
+$BR-gray-d: #575757;
+$BR-gray-m: #717171;
+$BR-gray-l: #D9D9D9;
+$BR-gray-el: #E5E4E4;
+$BR-red: #D95104;
+$BR-yellow: #ede3b4;
+$BR-green: #D5DDB5;
+$white: $BR-gray-el;
+
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    background-color: $BR-bg;
+    margin: 0;
+    //NAV
+    nav {
+        background-color: $primary;
+        border-bottom: 2px solid $secondary;
+        .navbar-brand {
+            color: $BR-gray-d;
+            @media screen and (min-width: 800px) {
+                font-weight: 600;
+            }
+            img {
+                color: $BR-gray-d;
+            }
+        }
+    .nav-link {
+        color: $BR-gray-ed;
+        @media screen and (min-width: 800px) {
+            font-weight: 600;
+        }
+    }
+    .nav-link .active {
+        color: $BR-gray-d;
+    }
+    #youarehere{
+        color: $BR-gray-m;
+    }
+    }
+    //JUMBOTRON
+    .jumbotron {
+        background-size: 100vw;
+        display: block;
+        text-align: center;
+        @media screen and (min-width: 1000px) {
+            background-size: 100vw;
+            height: 48vw;
+            h1 {
+                color: $BR-red;
+                font-size: calc(1rem + 1vw);;
+                font-weight: 500;
+                padding-top: calc(15% + 6vw);
+                padding-bottom: .1em;
+            }
+            h2 {
+                color: $BR-gray-d;
+                font-size: 5rem;
+                font-weight: 700;
+            }
+        }
+        @media screen and (min-width: 500px) and (max-width: 999px) {
+            background-size: 100vw;
+            height: 65vw;
+            h1 {
+                color: $BR-red;
+                font-size: calc(1rem + 1vw);
+                font-weight: 500;
+                padding-top: calc(20% + 6vw);
+                padding-bottom: .1em;
+            }
+            h2 {
+                color: $BR-gray-d;
+                font-size: calc(2.5rem + 1vw);
+                font-weight: 700;
+            }
+        }
+        @media screen and (max-width: 499px) {
+            background-size: 100vw;
+            height: 65vw;
+            h1 {
+                color: $BR-red;
+                font-size: calc(1rem + 1vw);
+                font-weight: 500;
+                padding-top: calc(20% + 6vw);
+                padding-bottom: .1em;
+            }
+            h2 {
+                color: $BR-gray-d;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+    }
+    #index-jumbo {
+        @media screen and (min-width: 1000px) {
+            background-image: url(../images/spices_index_desktop_opacity.jpg);
+        }
+        @media screen and (max-width: 999px) {
+            background-image: url(../images/spices_index_opacity.jpg);
+        }
+    }
+    #about-jumbo {
+        @media screen and (min-width: 1000px) {
+            background-image: url(../images/eating_about_desktop_opacity.jpg);
+        }
+        @media screen and (max-width: 999px) {
+            background-image: url(../images/eating_about_opacity.jpg);
+        }
+    }
+    #recipes-jumbo {
+        @media screen and (min-width: 1000px) {
+            background-image: url(../images/dish_recipes_desktop_opacity.jpg);
+        }
+        @media screen and (max-width: 999px) {
+            background-image: url(../images/dish_recipes_opacity.jpg);
+        }
+    }
+    #ingredients-jumbo {
+        @media screen and (min-width: 1000px) {
+            background-image: url(../images/ingredients_desktop_opacity.jpg);
+        }
+        @media screen and (max-width: 999px) {
+            background-image: url(../images/ingredients_opacity.jpg);
+        }
+    }
+    #careers-jumbo {
+        @media screen and (min-width: 1000px) {
+            background-image: url(../images/cooking_careers_desktop_opacity.jpg);
+        }
+        @media screen and (max-width: 999px) {
+            background-image: url(../images/cooking_careers_opacity.jpg);
+        }
+    }
+    #terms-jumbo {
+        @media screen and (min-width: 1000px) {
+            background-image: url(../images/cookbook_dictionary_desktop_opacity.jpg);
+        }
+        @media screen and (max-width: 999px) {
+            background-image: url(../images/cookbook_dictionary_opacity.jpg);
+        }
+    }
+    //CARD GRID
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: .25em;
+        grid-template-areas: "rec rec rec ing ing ing"
+                             "t t a a c c";
+        @media screen and (min-width: 1000px) {
+            margin-left: 12vw;
+            margin-right: 12vw;
+        }
+        .card {
+            background-color: $BR-gray-el;
+            border: 0;
+            h5 {
+                text-align: center;
+                color: $BR-gray-d;
+                font-size: 1.75rem;
+                padding: .25em;
+            }
+            p {
+                font-size: calc(1rem + .25vw);
+                color: $BR-gray-m;
+                margin-left: .75em;
+                margin-right: .75em;
+            }
+            .card-img-top {
+                width: 100%;
+            }
+        }
+        #card-rec {
+            grid-area: rec;
+            width: auto;
+            margin-left: .5em;
+            margin-top: .5em;
+            margin-bottom: .25em;
+            margin-right: .125em;
+        }
+        #card-ing {
+            grid-area: ing;
+            width: auto;
+            margin-right: .5em;
+            margin-top: .5em;
+            margin-bottom: .25em;
+            margin-left: .125em;
+        }
+        #card-ter {
+            grid-area: t;
+            width: auto;
+            margin-left: .5em;
+        }
+        #card-abo {
+            grid-area: a;
+            width: auto;
+            margin-left: .25em;
+            margin-right: .25em;
+        }
+        #card-car {
+            grid-area: c;
+            width: auto;
+            margin-right: .5em;
+        }
+        #cardbutton { //funky work around
+            background-color: $BR-gray-el;
+            border: 0;
+            color: $BR-gray-el;
+        }
+        @media screen and (max-width: 499px) {
+            grid-template-columns: auto;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: .5em;
+            grid-template-areas: "rec"
+                                "ing"
+                                "t"
+                                "a"
+                                "c";
+            margin-right: 6vw;
+            margin-left: 6vw;
+            margin-top: .5em;
+            .card {
+                margin: 0 !important;
+            }
+        }
+        .card-link {
+            text-decoration: none;
+        }
+        .card-link:hover,
+        .card-link:active {
+            .card-img-top {
+                border-bottom: 5px solid $BR-white;
+            }
+        }
+    }
+    //RECIPE GRID
+    .recipe-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: .5em;
+        grid-template-areas: "one one two two three three"
+                             "four four five five six six";
+        .card {
+            background-color: $BR-gray-l;
+            border: 0;
+
+            h5 {
+                color: $BR-gray-d;
+                text-align: center;
+            }
+            p {
+                color: $BR-gray-m;
+                font-weight: 400;
+            }
+            .btn {
+                color: $BR-gray-d;
+                font-weight: 500;
+            }
+        }
+        @media screen and (min-width: 1000px) {
+            margin-left: 12vw;
+            margin-right: 12vw;
+            margin-top: .5em;
+            margin-bottom: .5em;
+        }
+        @media screen and (min-width: 500px) and (max-width: 999px) {
+            grid-template-rows: auto auto auto;
+            grid-template-areas: "one one one two two two"
+                                 "three three three four four four"
+                                 "five five five six six six";
+            margin-right: .5em;
+            margin-left: .5em;
+            margin-top: .5em;
+            margin-bottom: .5em;
+        }
+        @media screen and (max-width: 499px) {
+            grid-template-columns: auto;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: .5em;
+            grid-template-areas: "one"
+                                 "two"
+                                 "three"
+                                 "four"
+                                 "five"
+                                 "six";
+                                 margin-right: .5em;
+            margin-left: .5em;
+            margin-top: .5em;
+            margin-bottom: .5em;
+        }
+        
+        #recone {
+            grid-area: one;
+        }
+        #rectwo {
+            grid-area: two;
+        }
+        #recthree {
+            grid-area: three;
+        }
+        #recfour {
+            grid-area: four;
+        }
+        #recfive {
+            grid-area: five;
+        }
+        #recsix {
+            grid-area: six;
+        }
+    }
+    //ACCORDION
+    .accordion {
+        margin-right: .5em;
+        margin-left: .5em;
+        border: 0 !important;
+        .accordion-item {
+            background-color: $BR-gray-l;
+            border: 0;
+        }
+        .accordion-button {
+            background-color: $BR-gray-l;
+            border-bottom: 1px solid $BR-bg;
+        }
+        .accordion-button {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        h3,
+        h4 {
+            font-size: 1.25rem;
+            color: $BR-gray-d;
+        }
+        h5 {
+            font-size: 1.15rem;
+            margin-left: -1em;
+            margin-top: .25em;
+            color: $BR-gray-d;
+        }
+        p,
+        li {
+            color: $BR-gray-m;
+            font-weight: 400;
+        }
+        @media screen and (min-width: 1000px) {
+            margin-left: 12vw;
+            margin-right: 12vw;
+        }
+    }
+    //TERMS
+    .term-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "a b"
+                             "c d"
+                             "e f"
+                             "g h"
+                             "i j";
+        @media screen and (max-width: 499px) {
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+            grid-template-areas: "a"
+                                 "b"
+                                 "c"
+                                 "d"
+                                 "e"
+                                 "f"
+                                 "g"
+                                 "h"
+                                 "i"
+                                 "j";
+            margin: .5em;
+            
+        }
+        @media screen and (min-width: 1000px) {
+            margin-left: 12vw;
+            margin-right: 12vw;
+            justify-content: center;
+            .term {
+                max-width: 35vw;
+            }
+        }
+        .term {
+            background-color: $BR-bg;
+            border-radius: .25em;
+            padding-left: 2.5em;
+            padding-right: 2.5em;
+            margin-top: 2em;
+            max-width: 100vw;
+            h3 {
+                color: $BR-gray-d;
+            }
+            p {
+                color: $BR-gray-m;
+                font-size: 1.25rem;
+            }
+            .video_btn {
+                background-color: $primary;
+                color: $BR-gray-d;
+                text-decoration: none;
+                padding: .5em;
+                border-radius: .25em;
+                font-weight: 500;
+            }
+        }
+    }
+    //INFO CARDS
+    .info-card {
+        background-color: $BR-gray-el;
+        margin: 1.5em;
+        border-radius: .25em;
+        padding-left: 3em;
+        padding-right: 3em;
+        padding-top: .5em;
+        padding-bottom: 1.5em;
+        h3 {
+            color: $BR-red;
+            margin: .5em;
+            text-align: center;
+        }
+        p {
+            color: $BR-gray-m;
+            margin: .5em;
+        }
+        @media screen and (min-width: 1000px) {
+            margin-left: 12vw;
+            margin-right: 12vw;
+            justify-content: center;
+        }
+        @media screen and (max-width: 499px) {
+            max-height: 250px;
+            overflow: auto;
+        }
+    }
+    //INGREDIENTS
+    .ingredient-container {
+        margin: .5em;
+        @media screen and (min-width: 1000px) {
+            margin-left: 12vw;
+            margin-right: 12vw;
+            justify-content: center;
+        }
+        .ingred {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto auto auto;
+            grid-template-areas: "t t t"
+                                 "a b c"
+                                 "d e f"
+                                 "g h i"
+                                 "j k l"
+                                 "z z z";
+            background-color: $BR-gray-el;
+            padding: .5em;
+            border-radius: .1em;
+            justify-content: center;
+            @media screen and (min-width: 500px) and (max-width: 999px) {
+                grid-template-columns: auto auto;
+                grid-template-rows: repeat(6, auto);
+                grid-template-areas: "t t"
+                                     "a b"
+                                     "c d"
+                                     "e f"
+                                     "g h"
+                                     "i j"
+                                     "k l"
+                                     "z z";
+            }
+            @media screen and (max-width: 499px) {
+                grid-template-columns: auto;
+                grid-template-rows: repeat(13, auto);
+                grid-template-areas: "t"
+                                     "a"
+                                     "b"
+                                     "c"
+                                     "d"
+                                     "e"
+                                     "f"
+                                     "g"
+                                     "h"
+                                     "i"
+                                     "j"
+                                     "k"
+                                     "l"
+                                     "z";
+            }
+            .btt {
+                grid-area: z;
+                text-align: center;
+            }
+            .ingred-title {
+                grid-area: t;
+                color: $BR-gray-m;
+                text-align: center;
+                border-bottom: 1px solid $BR-gray-m;
+                margin-bottom: 3em;
+                margin-top: .5em;
+            }
+            .item {
+                color: $BR-gray-m;
+                font-size: 1.15rem;
+                font-weight: 500;
+                margin-right: 3.5em;
+                margin-left: 3.5em;
+                margin-bottom: 1.5em;
+                text-align: center;
+                width: 15vw;
+                @media screen and (min-width: 500px) and (max-width: 999px) {
+                    width: 30vw;
+                }
+                @media screen and (max-width: 499px) {
+                    width: 60vw;
+                }
+                .ingred-btn {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    background-color: $primary;
+                    color: $BR-gray-d;
+                    padding: .25em;
+                    border-radius: .25em;
+                }
+                .ind-ingred {
+                    font-size: .75rem;
+                    height: 60px;
+                    overflow: auto;
+                    text-align: center;
+                    margin-bottom: .5em;
+                    h6 {
+                        text-align: center;
+                        margin-left: 1.5em;
+                        font-size: .85rem;
+                        border-bottom: 1px solid $BR-gray-l;
+                        margin-bottom: .25em;
+                        padding-bottom: .25em;
+                        @media screen and (max-width: 499px) {
+                            margin-left: auto;
+                        }
+                    }
+                    ul {
+                        list-style-type: none;
+                        text-align: center;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+        }
+    }
+    //CAREERS
+    .career-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "a b";
+        justify-content: center;
+        margin-left: 12vw;
+        margin-right: 12vw;
+        margin-top: .5em;
+        @media screen and (max-width: 499px) {
+            margin-left: auto;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            grid-template-areas: "a"
+                                 "b";
+            margin-left: .5em;
+            margin-right: .5em;
+        }
+        @media screen and (min-width: 500px) and (max-width: 999px) {
+            margin-left: auto;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            grid-template-areas: "a"
+                                 "b";
+            margin-left: 5em;
+            margin-right: 5em;
+        }
+        .career {
+            width: 100%;
+            margin-top: .5em;
+            h3 {
+                color: $BR-gray-d;
+                font-weight: 600;
+                padding-top: .5em;
+                padding-bottom: .5em;
+                padding-left: 0;
+                padding-right: 0;
+                font-size: 2rem;
+                text-align: center;
+            }
+            p {
+                color: $BR-gray-d;
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-top: .5em;
+                padding-bottom: .5em;
+                small {
+                    padding: 0;
+                }
+            }
+            img {
+                width: 100%;
+            }
+        }
+        #tester {
+            background-color: $BR-green;
+            grid-area: a;
+        }
+        #creator {
+            background-color: $BR-yellow;
+        }
+    }
+    .heading {
+        text-align: center;
+        margin: 1em;
+        color: $BR-gray-d;
+    }
+    //FOOTER
+    footer {
+        background-color: $primary;
+        padding-bottom: .5em;
+        padding-top: 1em;
+        color: $BR-gray-d;
+        text-align: center;
+        margin-top: .5em;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 100%;
+    }
+}
